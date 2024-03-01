@@ -1,6 +1,5 @@
 # Obsidian Plugin: Highlight-AskGPT 
-WIP. The goal for this project is to create a plugin for Obsidian that
-allows users to highlight text and quickly hit OpenAI's GPT model for further elaboration on the text.
+The goal for this project is to develop a community plug-in Obsidian that allows users to highlight text and quickly hit OpenAI's GPT model for further elaboration on the text.
 
 ## Project Roadmap
 Below is a list of milestones for developing this plugin. 
@@ -12,9 +11,6 @@ Below is a list of milestones for developing this plugin.
  - [ ] Plugin submitted and approved for community use
 
 ## Sources of Inspiration
-
 - [Obsidian's Sample Plugin](https://github.com/obsidianmd/obsidian-api)
 - [Hightlightr Plugin](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
 - [Obsidian Copilot](https://github.com/logancyang/obsidian-copilot)
-- Obsidian's Sample Plugin https://github.com/obsidianmd/obsidian-api
-
