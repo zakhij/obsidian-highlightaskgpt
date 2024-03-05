@@ -3,8 +3,8 @@ The goal for this project is to develop a community plug-in Obsidian that allows
 
 ## Project Roadmap
 Below is a list of milestones for developing this plugin. 
- - [ ] Command prints highlighted text in console
- - [ ] Command added to context menu
+ - [X] Command prints highlighted text in console
+ - [ ] Command added to context menu (with icon)
  - [ ] Command prints highlighted text to separate container
  - [ ] Command prints GPT response of highlighted text
  - [ ] Command starts GPT conversation with highlighted text
