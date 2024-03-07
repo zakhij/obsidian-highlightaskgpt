@@ -1,8 +1,9 @@
-import {Editor, Plugin, Menu, App, EventRef} from 'obsidian';
-import contextMenu from './contextmenu';
+import {Editor, Plugin, Menu, App} from 'obsidian';
+import { textToConsole, addContextMenu } from 'src/functions';
 
 
 export default class HighlightGPT extends Plugin {
+    app: App;
 	async logToConsole(editor: Editor) {
         const selection = editor.getSelection();
         if (selection) {
@@ -19,10 +20,10 @@ export default class HighlightGPT extends Plugin {
 	
 	async onload() {
         this.addCommand({
-            id: "text-to-console",
+            id: "texttoconsole",
             name: "Text to Console",
             editorCallback: (editor: Editor) => {
-                this.logToConsole(editor);
+                textToConsole(editor, this);
             },
         });
     
@@ -31,11 +32,12 @@ export default class HighlightGPT extends Plugin {
 		);
 	
 	}
-	handleContextMenu = (
+	
+    handleContextMenu = (
 		menu: Menu,
 		editor: Editor
 	  ): void => {
-		contextMenu(this.app, menu, editor, this);
+		addContextMenu(this.app, menu, editor, this);
 	  };
 }
 
