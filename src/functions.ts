@@ -2,7 +2,7 @@
 import HighlightGPT from "src/main";
 import { Editor, Plugin, Menu, App} from "obsidian";
 
-export default function addContextMenu(
+export function addContextMenu(
 	app: App,
 	menu: Menu,
 	editor: Editor,
