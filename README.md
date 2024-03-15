@@ -5,7 +5,7 @@ The goal for this project is to develop a community plugin for Obsidian that all
 Below is a list of milestones for developing this plugin. 
  - [X] Command prints highlighted text in console
  - [X] Command added to context menu
- - [ ] Command prints highlighted text to notification
+ - [X] Command prints highlighted text to notification
  - [ ] Command prints localized GPT API response of highlighted text to notification
  - [ ] Settings page for command created (to allow each user to configure their own GPT API)
  - [ ] Final refinements and restrictions applied to command

@@ -1,32 +1,29 @@
-import {Editor, Plugin, Menu, App} from 'obsidian';
-import { textToConsole, addContextMenu } from 'src/functions';
+import {Editor, Plugin, Menu, App, ItemView, WorkspaceLeaf} from 'obsidian';
+import { textToConsole, addContextMenu, createSelectableNotice, textToNotice } from 'src/functions';
 
 
 export default class HighlightGPT extends Plugin {
     app: App;
-	async logToConsole(editor: Editor) {
-        const selection = editor.getSelection();
-        if (selection) {
-            const selectedText = selection.toString().trim();
-            if (selectedText.length > 0) {
-                console.log(selectedText);
-            } else {
-                console.log("Must highlight some actual text.");
-            }
-        } else {
-            console.log("No text highlighted");
-        }
-    }
-	
+    
 	async onload() {
         this.addCommand({
             id: "texttoconsole",
             name: "Text to Console",
             editorCallback: (editor: Editor) => {
                 textToConsole(editor, this);
+                //this.openMySideView();
             },
         });
-    
+
+        this.addCommand({
+            id: "create-selectable-notice",
+            name: "Create Selectable Notice",
+            editorCallback: (editor: Editor) => {
+                textToNotice(editor, this);
+            }
+        })
+
+
 		this.registerEvent(
 			this.app.workspace.on("editor-menu", this.handleContextMenu)
 		);
@@ -39,5 +36,5 @@ export default class HighlightGPT extends Plugin {
 	  ): void => {
 		addContextMenu(this.app, menu, editor, this);
 	  };
-}
 
+}
