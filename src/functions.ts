@@ -79,16 +79,21 @@ export function createSelectableNotice(content: string) {
   notice.style.position = "absolute";
   notice.style.top = "10px"; // Adjust as needed
   notice.style.right = "10px"; // Adjust as needed
+  notice.style.width = "200px";
+  notice.style.maxHeight = "80%"; // Maximum height to avoid oversizing
+  notice.style.overflowY = "auto"; // Enable scroll for overflow
   notice.style.zIndex = "100";
   notice.style.backgroundColor = "#333"; // Match Obsidian theme or as desired
   notice.style.color = "white";
   notice.style.padding = "10px";
   notice.style.borderRadius = "5px";
+  notice.style.border = "2px solid black";
   notice.style.userSelect = "text"; // Key for text selection
+
 
   // Create a close button
   const closeButton = document.createElement("button");
-  closeButton.innerText = "✖"; // Stylish close icon
+  closeButton.innerText = "x"; // Stylish close icon
   closeButton.style.position = "absolute";
   closeButton.style.top = "0";
   closeButton.style.right = "0";
